@@ -1,6 +1,10 @@
 # Android_Registration
 ### This is an android project made in java and xml , the purpose is to make a registration project to register a new user.
 
+```bash
+near call <your deployed contract> hello --account-id <username>.testnet
+```
+
 Tecnology Used 
 <img src="https://img.shields.io/badge/-xml-yellowgreen"> 
 <img src="https://img.shields.io/badge/-java-red">
