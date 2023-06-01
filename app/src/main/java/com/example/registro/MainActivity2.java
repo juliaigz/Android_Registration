@@ -7,14 +7,12 @@ import android.os.Bundle;
 import android.widget.TextView;
 
 public class MainActivity2 extends AppCompatActivity {
-
-
     TextView mensaje;
-
     String nombre;
     String apellido;
     String correo;
 
+    private ActivityMainBinding binding;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,8 +28,6 @@ public class MainActivity2 extends AppCompatActivity {
         correo = intent.getStringExtra("correo");
 
         mensaje.setText("nombre:"+nombre + "apellido : "+ apellido+ "correo : "+ correo );
-
-
 
     }
 }

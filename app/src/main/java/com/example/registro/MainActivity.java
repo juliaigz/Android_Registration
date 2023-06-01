@@ -1,6 +1,7 @@
 package com.example.registro;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.databinding.DataBindingUtil;
 
 import android.content.Context;
 import android.content.Intent;
@@ -12,36 +13,42 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.registro.databinding.ActivityMainBinding;
+
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class MainActivity extends AppCompatActivity {
-
     EditText textNombre;
     EditText textApellido;
     EditText textEmail;
     EditText textPassword;
-
     Button buttonRegistrarse;
     String pass = "1234";
-
-
+    private ActivityMainBinding binding;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        //setContentView(R.layout.activity_main);
 
-        textNombre = (EditText) findViewById(R.id.textNombre);
-        textApellido = (EditText) findViewById(R.id.textApellido);
-        textEmail = (EditText) findViewById(R.id.textEmail);
-        textPassword = (EditText) findViewById(R.id.textPassword);
+        binding = ActivityMainBinding.inflate(getLayoutInflater());
+        //binding = DataBindingUtil.setContentView(this, R.layout.activity_main);
+        setContentView(binding.getRoot());
 
-        buttonRegistrarse =(Button) findViewById(R.id.buttonRegistrarse);
+        //textNombre = (EditText) findViewById(R.id.textNombre);
+        //textApellido = (EditText) findViewById(R.id.textApellido);
+        //textEmail = (EditText) findViewById(R.id.textEmail);
+        //textPassword = (EditText) findViewById(R.id.textPassword);
+        //buttonRegistrarse =(Button) findViewById(R.id.buttonRegistrarse);
+        textNombre = binding.textNombre;
+        textApellido = binding.textApellido;
+        textEmail = binding.textEmail;
+        textPassword = binding.textPassword;
+        buttonRegistrarse = binding.buttonRegistrarse;
 
         buttonRegistrarse.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
                 //toast
                 Context context = getApplicationContext();
                 CharSequence text = "Datos vacios";
@@ -53,14 +60,11 @@ public class MainActivity extends AppCompatActivity {
                 Toast toast2 = Toast.makeText(context, text2, duracion);
                 Toast toast3 = Toast.makeText(context, text3, duracion);
                 Toast toast4 = Toast.makeText(context, text4, duracion);
-
-
                 // obtenemos los datos del usuario.
                 String nombre = textNombre.getText().toString();
                 String apellido = textApellido.getText().toString();
                 String correo = textEmail.getText().toString();
                 String clave = textPassword.getText().toString();
-
                 //validamos campos vacios
                 if ((!textNombre.getText().toString().trim().equals("")) && (!textApellido.getText().toString().trim().equals(""))
                         && (!textEmail.getText().toString().trim().equals(""))) {
@@ -83,23 +87,19 @@ public class MainActivity extends AppCompatActivity {
                                 intent.putExtra("correo", correo);
                                 intent.putExtra("clave", clave);
                                 startActivity(intent);
-
                             } else {
                                 toast2.show();
                             }
                         } else {
                             toast4.show();
                         }
-
                     } else {
                         toast3.show();
                     }
-
                 } else {toast.show();}
             }
             });
     }
-
     }
 
 
