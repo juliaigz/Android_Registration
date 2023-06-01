@@ -143,9 +143,9 @@ public class MainActivity2 extends AppCompatActivity {
 }
  ```
  
-Individual 10 
+# Individual 10 (working with binding instead of R.id)
 
-##Build grade : module app
+## Build grade : module app
 
 ```bash
  //DATOS DEL DATA BINDING
@@ -159,7 +159,7 @@ Individual 10
 ```
 ![image](https://github.com/juliaigz/Android_Registration/assets/40221707/231980e9-c67e-4085-889b-2a1825e57730)
 
-##activity_main.xml
+## activity_main.xml
 
 ```bash
  <data>
@@ -179,7 +179,7 @@ Individual 10
  ```
 ![image](https://github.com/juliaigz/Android_Registration/assets/40221707/f1fe0698-1d02-4e45-a060-9c7029e6dd03)
 
-##MainActivity.java
+## MainActivity.java
 
 ```bash
 public class MainActivity extends AppCompatActivity {
