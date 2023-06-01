@@ -271,5 +271,12 @@ public class MainActivity extends AppCompatActivity {
 ![image](https://github.com/juliaigz/Android_Registration/assets/40221707/7ceae34b-32af-44bd-a059-b424f6b9257b)
 
 
+Results
+![image](https://github.com/juliaigz/Android_Registration/assets/40221707/7ceae34b-32af-44bd-a059-b424f6b9257b)
+
+![image](https://github.com/juliaigz/Android_Registration/assets/40221707/7ceae34b-32af-44bd-a059-b424f6b9257b)
+
+
+
 
 
