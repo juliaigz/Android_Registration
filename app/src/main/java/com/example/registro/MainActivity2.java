@@ -6,13 +6,15 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.widget.TextView;
 
+import com.example.registro.databinding.ActivityMain2Binding;
+
 public class MainActivity2 extends AppCompatActivity {
     TextView mensaje;
     String nombre;
     String apellido;
     String correo;
 
-    private ActivityMainBinding binding;
+    private ActivityMain2Binding binding;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
